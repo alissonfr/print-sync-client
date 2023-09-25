@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&family=Sofia+Sans:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp|Material+Symbols+Outlined"
+    rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Bem-vindo ao print-sync!</title>
+</head>
+<body>
+    <main>
+        <section class="left">
+        </section>
+        <section class="right">
+            <div class="form-wrapper">
+                <h1>Bem vindo ao <span>print-sync</span></h1>
+                <form>
+                    <div class="form-item">
+                        <input type="email" id="email" autocomplete="off" placeholder="" required>
+                        <label for="email">E-mail</label>
+                    </div>
+                    <div class="form-item">
+                        <input type="password" id="password" autocomplete="off" placeholder="" required>
+                        <label for="password">Senha</label>
+                        <a href="#">Esqueceu sua senha?</a>
+                    </div>
+                    <div class="buttons">
+                        <button onclick="onSubmit()">Login</button>
+                    </div>
+                    <hr>
+                    <div class="register">
+                        Não tem uma conta? <span>Cadastre-se</span>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
