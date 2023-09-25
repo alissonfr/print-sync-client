@@ -1,10 +1,16 @@
 import socketio
+import json
+from datetime import datetime
 
 sio = socketio.Client()
 
 @sio.event
 def connect():
     print('Conectado ao servidor Socket.IO')
+
+@sio.event
+def connect_error(data):
+    print("The connection failed!")
 
 @sio.event
 def mensagem_do_cliente(data):
@@ -21,6 +27,13 @@ def disconnect():
 sio.connect('ws://25.62.141.82:5000')
 
 message = input('Digite uma mensagem para enviar ao servidor no tópico "mensagem_do_cliente": ')
-sio.emit('mensagem_do_cliente', message)
+
+data = {
+    "username": "alissondzn", 
+    "send_at": str(datetime.now().date()), 
+    "blb_image": "base64"
+}
+
+sio.emit('send_capture', json.dumps(data))
 
 sio.wait()
