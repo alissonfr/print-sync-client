@@ -1,3 +1,4 @@
 function onSubmit() {
-    window.pywebview.api.send_value(true);
+    const username = document.getElementById('username').value;
+    window.pywebview.api.init_connection(username)
 }

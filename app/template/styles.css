@@ -46,6 +46,13 @@ section.right {
         padding: 40px;
         background-color: var(--body);
         border-radius: 12px;
+        text-align: center;
+
+        > img {
+            margin-bottom: 25px;
+            height: 75px;
+            margin: 1;
+        }
         
         > h1 {
             color: #FFF;
@@ -131,6 +138,7 @@ section.right {
                     font-weight: 600;
                     border-radius: 8px;
                     transition: all 200ms;
+                    cursor: pointer;
                 }
     
                 > button:hover {
@@ -155,6 +163,7 @@ section.right {
 
                 > span {
                     color: var(--primary);
+                    cursor: pointer;
                 }
             }
     
