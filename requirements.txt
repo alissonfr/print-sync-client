@@ -2,6 +2,6 @@ keyboard==0.13.5
 pyautogui==0.9.54
 python-socketio==5.9.0
 requests==2.31.0
-websocket==0.2.1
 websocket-client==1.6.3
 win11toast==0.32
+pywebview==4.3.3
