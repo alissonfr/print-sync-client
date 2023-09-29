@@ -1,8 +1,14 @@
 # Rodar a aplicação
 
 ```properties
+python3 -m venv .venv
+```
+```properties
 .\.venv\Scripts\Activate
 ```
 ```properties
-uvicorn app.main:app --reload
+pip install -r requirements.txt
+```
+```properties
+py app/main.py
 ```
