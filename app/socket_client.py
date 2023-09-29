@@ -37,6 +37,7 @@ class SocketClient:
             "send_at": dt_formatted,
             "blb_image": string_image
         }
+        print("Enviando...", self.username)
         self.sio.emit('capture', json.dumps(data))
         self.sio.wait()
 

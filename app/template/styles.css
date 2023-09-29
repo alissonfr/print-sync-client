@@ -70,6 +70,7 @@ section.right {
             > .form-item {
                 position: relative;
                 margin-bottom: 15px;
+                text-align: left;
     
                 > input {
                     width: 100%;
@@ -119,6 +120,11 @@ section.right {
                 > a:hover {
                     text-decoration: none;
                     color: var(--primary);
+                    font-size: 12px;
+                }
+
+                > small {
+                    color: #ef4444;
                     font-size: 12px;
                 }
     

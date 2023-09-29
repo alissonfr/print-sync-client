@@ -10,7 +10,6 @@
     href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp|Material+Symbols+Outlined"
     rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
     <title>Bem-vindo ao print-sync!</title>
 </head>
 <body>
@@ -21,13 +20,14 @@
             <div class="form-wrapper">
                 <img src="assets/logo.png" alt="">
                 <h1>Bem vindo ao <span>print-sync</span></h1>
-                <form>
+                <form id="form">
                     <div class="form-item">
                         <input type="text" id="username" autocomplete="off" placeholder="" required>
                         <label for="username">Nome de usuário</label>
+                        <small id="error"></small>
                     </div>
                     <div class="buttons">
-                        <button onclick="onSubmit()">Começar</button>
+                        <button id="button" type="button">Começar</button>
                     </div>
                     <hr>
                     <div class="register">
@@ -37,5 +37,6 @@
             </div>
         </section>
     </main>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

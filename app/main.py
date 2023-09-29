@@ -15,7 +15,9 @@ class Api:
         self._window = window
 
     def init_connection(self, username):
+        print("Tentando iniciar conexão com o servidor...")
         self.client = SocketClient('ws://25.62.141.82:5000', username)
+        print("Conexão com o servidor iniciada.")
 
     def capture_encode(self):
         photo = pyautogui.screenshot()
