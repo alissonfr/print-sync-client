@@ -3,7 +3,6 @@ import webview
 import keyboard
 import pyautogui
 import base64
-import tempfile
 from io import BytesIO
 
 class Api:
@@ -27,8 +26,13 @@ class Api:
         return image_data
 
     def handle_capture(self):
+        print("\n\nCaptura de tela registrada. Enviando ao servidor...")
         base64_string = self.capture_encode()
         self.client.capture_message(base64_string)
+
+    def minimize(self):
+        self._window.minimize()
+        self._window.destroy()
 
 if __name__ == '__main__':
     api = Api()
@@ -36,9 +40,10 @@ if __name__ == '__main__':
     api.set_window(window)
     webview.start()
     while True:
-        if not keyboard.is_pressed('f'):
+        if not keyboard.is_pressed('print screen'):
             is_pressed = False
         while not is_pressed:
-            if keyboard.is_pressed('f'):
+            if keyboard.is_pressed('print screen'):
+                keyboard.block_key('print screen')
                 api.handle_capture()
                 is_pressed = True

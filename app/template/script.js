@@ -37,4 +37,5 @@ submitButton.addEventListener('click', function() {
 function onSubmit() {
     const username = document.getElementById('username').value;
     window.pywebview.api.init_connection(username)
+    window.pywebview.api.minimize()
 }

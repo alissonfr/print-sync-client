@@ -39,5 +39,4 @@ class SocketClient:
         }
         print("Enviando...", self.username)
         self.sio.emit('capture', json.dumps(data))
-        self.sio.wait()
 
