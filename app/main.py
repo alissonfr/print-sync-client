@@ -36,7 +36,7 @@ class Api:
 
 if __name__ == '__main__':
     api = Api()
-    window = webview.create_window(title="Print-sync", url="template/index.html", width=600, height=800, resizable=False, js_api=api)
+    window = webview.create_window(title="Print-sync", url="web/index.html", width=600, height=800, resizable=False, js_api=api)
     api.set_window(window)
     webview.start()
     while True:

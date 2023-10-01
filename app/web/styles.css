@@ -1,0 +1,196 @@
+/* ============= RESET ============= */
+
+*, body, html {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body, html {
+    background-color: var(--container);
+    overflow: hidden;
+}
+
+*:focus {
+    outline: none;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+}
+
+
+/* ============= LEFT COLUMN ============= */
+
+section.left {
+    width: 50vw;
+    background-color: var(--light-primary);
+}
+
+/* ============= RIGHT COLUMN ============ */
+
+section.right {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 560px;
+    padding: 40px;
+    background-color: var(--body);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.form-wrapper img {
+    margin-bottom: 25px;
+    height: 75px;
+    margin: 1;
+}
+
+.form-wrapper h1 {
+    color: #FFF;
+    font-size: 20px;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.form-wrapper h1 span {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.form-wrapper form .form-item {
+    position: relative;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-wrapper form .form-item small {
+    color: #ef4444;
+    font-size: 12px;
+}
+
+.form-wrapper form .form-item input {
+    width: 100%;
+    height: 45px;
+    border: solid 1px var(--gray-700);
+    transition: all 100ms ease;
+    padding: 0 15px;
+    background-color: transparent;
+    color: #FFF;
+}
+
+.form-wrapper form .form-item input:focus {
+    border-color: var(--primary);
+}
+
+.form-wrapper form .form-item label {
+    position: absolute;
+    cursor: text;
+    z-index: 2;
+    top: 13px;
+    left: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 10px;
+    color: #ebebebb3;
+    transition: all 100ms ease;
+    background-color: var(--body);
+}
+
+.form-wrapper form .form-item input:focus + label,
+input:not(:placeholder-shown) + label {
+  font-size: 12px;
+  top: -6px;
+}
+
+.form-wrapper form .form-item input:focus + label {
+    color: var(--primary);
+}
+
+.form-wrapper form .form-item a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form-wrapper form .form-item a:hover {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 12px;
+}
+
+.form-wrapper form .buttons {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.form-wrapper form .buttons button {
+    width: 100%;
+    border: none;
+    background-color: #FFF;
+    color: var(--body);
+    font-size: 14px;
+    padding: 12px 0;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 200ms;
+    cursor: pointer;
+}
+
+.form-wrapper form .buttons button:hover {
+    background-color: var(--primary);
+    color: #FFF;
+}
+
+.form-wrapper form hr {
+    width: 100%;
+    height: 1px;
+    margin: 25px 0;
+    background-color: var(--gray-800);
+}
+
+.form-wrapper form .register {
+    text-align: center;
+    width: 100%;
+    font-weight: 600;
+    color: var(--gray-500);
+    font-size: 12px;
+}
+
+.form-wrapper form .register span {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/* ============= RESPONSIVENESS ============ */
+
+@media (max-width: 992px) {
+    section.left {
+        display: none;
+    }
+
+    section.right {
+        width: 100vw;
+    }
+}
+
+:root {
+    --primary: #8f66ff;
+    --container: #131313;
+    --body: #1a1a1a;
+    --light-primary: #cbbef0;
+    --gray-500: #71717a;
+    --gray-700: #3f3f46;
+    --gray-800: #27272a;
+  }
