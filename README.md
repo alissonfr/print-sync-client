@@ -1,14 +1,14 @@
 # Rodar a aplicação
 
-```properties
+```bash
 python3 -m venv .venv
 ```
-```properties
+```bash
 .\.venv\Scripts\Activate
 ```
-```properties
+```bash
 pip install -r requirements.txt
 ```
-```properties
+```bash
 py app/main.py
 ```
