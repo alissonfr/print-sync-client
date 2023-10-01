@@ -5,3 +5,4 @@ requests==2.31.0
 websocket-client==1.6.3
 win11toast==0.32
 pywebview==4.3.3
+python_dotenv==1.0.0

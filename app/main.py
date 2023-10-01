@@ -4,6 +4,8 @@ import keyboard
 import pyautogui
 import base64
 from io import BytesIO
+from config.env import *
+from os import environ
 
 class Api:
     def __init__(self):
@@ -15,7 +17,7 @@ class Api:
 
     def init_connection(self, username):
         print("Tentando iniciar conexão com o servidor...")
-        self.client = SocketClient('ws://25.62.141.82:5000', username)
+        self.client = SocketClient(environ.get("SERVER_URL"), username)
         print("Conexão com o servidor iniciada.")
 
     def capture_encode(self):
